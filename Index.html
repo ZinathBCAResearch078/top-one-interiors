@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top One Interiors | Luxury Turnkey Home Interiors Hyderabad</title>
+    <meta name="description" content="Premium interior design services in Boduppal, Hyderabad. 4.8-star rated specialists in modular kitchens, luxury wardrobes, and false ceilings.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons & Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#121315',
+                        slate: '#1E2022',
+                        champagne: '#F9F8F6',
+                        gold: '#C5A880',
+                        amberGlow: '#FF9F1C',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'soft-float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        .glass-nav {
+            background: rgba(18, 19, 21, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A880 0%, #E2D1B3 100%);
+        }
+
+        .text-glow-gold {
+            text-shadow: 0 0 15px rgba(197, 168, 128, 0.3);
+        }
+
+        .luxury-card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .luxury-card-shadow:hover {
+            box-shadow: 0 20px 40px -15px rgba(197, 168, 128, 0.2);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #121315; }
+        ::-webkit-scrollbar-thumb { background: #C5A880; border-radius: 10px; }
+
+        .image-zoom-container { overflow: hidden; }
+        .image-zoom-container img { transition: transform 0.7s scale(1.05); }
+        .image-zoom-container:hover img { transform: scale(1.1); }
+    </style>
+</head>
+
+<body class="bg-champagne text-charcoal font-sans overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 glass-nav py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-gold font-serif text-xl md:text-2xl tracking-widest font-bold">TOP ONE</span>
+            <span class="text-white text-[10px] tracking-[0.3em] -mt-1 uppercase">Interiors</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-10 items-center">
+            <a href="#portfolio" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Portfolio</a>
+            <a href="#services" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Services</a>
+            <a href="#process" class="text-white/80 hover:text-gold transition-colors text-sm uppercase tracking-widest">Process</a>
+            <a href="https://wa.me/919398243784" class="bg-gold text-charcoal px-6 py-2.5 rounded-sm font-semibold text-xs uppercase tracking-widest hover:bg-white transition-all duration-500 luxury-card-shadow">Get Free Estimate</a>
+        </div>
+        
+        <!-- Mobile Toggle -->
+        <a href="https://wa.me/919398243784" class="md:hidden bg-gold text-charcoal p-2 rounded-full px-4 text-[10px] font-bold uppercase tracking-tighter">Inquire Now</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col md:flex-row items-center pt-20 overflow-hidden">
+        <div class="w-full md:w-1/2 px-6 md:px-20 py-12 md:py-20 z-10">
+            <div class="inline-flex items-center space-x-2 bg-charcoal/5 border border-gold/20 rounded-full px-4 py-1 mb-6">
+                <span class="flex space-x-1">
+                    <i class="fas fa-star text-gold text-[10px]"></i>
+                    <i class="fas fa-star text-gold text-[10px]"></i>
+                    <i class="fas fa-star text-gold text-[10px]"></i>
+                    <i class="fas fa-star text-gold text-[10px]"></i>
+                    <i class="fas fa-star text-gold text-[10px]"></i>
+                </span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-slate">4.8 Stars | 154+ Reviews</span>
+            </div>
+            
+            <h1 class="font-serif text-5xl md:text-7xl leading-tight mb-8">
+                Crafting <span class="text-gold italic">High-End</span> Turnkey Homes.
+            </h1>
+            
+            <p class="text-slate/70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                From modular kitchens to luxury false ceilings, we turn spaces into structural masterpieces. Boduppal’s neighborhood specialist in premium aesthetics.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#portfolio" class="bg-charcoal text-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-center hover:bg-gold transition-all duration-500 luxury-card-shadow">
+                    View Our Work
+                </a>
+                <a href="https://wa.me/919398243784" class="border border-charcoal/20 px-8 py-4 text-sm font-bold uppercase tracking-widest text-center flex items-center justify-center gap-2 hover:bg-white transition-all duration-500">
+                    <i class="fab fa-whatsapp text-green-600 text-lg"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="w-full md:w-1/2 h-[50vh] md:h-screen relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1600" 
+                 alt="Luxury Living Room Interior" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-champagne via-transparent to-transparent md:block hidden"></div>
+            <!-- Floating Achievement -->
+            <div class="absolute bottom-10 left-10 bg-white/90 backdrop-blur p-6 luxury-card-shadow hidden md:block">
+                <p class="text-gold font-serif text-3xl font-bold">100+</p>
+                <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate">Homes Transformed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GRID -->
+    <section id="portfolio" class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4 reveal">
+                <div>
+                    <h2 class="text-gold uppercase tracking-[0.3em] text-xs font-bold mb-4">The Portfolio</h2>
+                    <h3 class="font-serif text-4xl md:text-5xl">Signature Projects</h3>
+                </div>
+                <p class="text-slate/60 max-w-sm text-sm">A curated selection of our most recent residential executions across Hyderabad.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal group">
+                    <div class="image-zoom-container relative h-[400px] mb-6">
+                        <img src="https://images.unsplash.com/photo-1556912177-d5403063973a?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Modern Kitchen">
+                        <div class="absolute top-4 left-4 bg-charcoal text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">Modular Kitchen</div>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-gold transition-colors">High-Gloss Acrylic Kitchen</h4>
+                    <p class="text-slate/60 text-sm italic">Handleless premium gray profiles with integrated under-cabinet LED setups.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="reveal group" style="transition-delay: 200ms;">
+                    <div class="image-zoom-container relative h-[400px] mb-6">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="TV Unit">
+                        <div class="absolute top-4 left-4 bg-charcoal text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">Living Zone</div>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-gold transition-colors">Marble Slab TV Accent</h4>
+                    <p class="text-slate/60 text-sm italic">Large-format marble backdrops with brass inlay lines and fluted wood framing.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="reveal group">
+                    <div class="image-zoom-container relative h-[400px] mb-6">
+                        <img src="https://images.unsplash.com/photo-1616486341351-70252447c574?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Bedroom Interior">
+                        <div class="absolute top-4 left-4 bg-charcoal text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">Bedroom</div>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-gold transition-colors">Master Arch Suite</h4>
+                    <p class="text-slate/60 text-sm italic">Custom dusty-blue tufted headboards and 3-panel sliding mirror wardrobes.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="reveal group" style="transition-delay: 200ms;">
+                    <div class="image-zoom-container relative h-[400px] mb-6">
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e16208a504?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Dining Unit">
+                        <div class="absolute top-4 left-4 bg-charcoal text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">Crockery Unit</div>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-gold transition-colors">Premium Display Dividers</h4>
+                    <p class="text-slate/60 text-sm italic">Integrated warm spotlight cabinets and vertical wood slat room dividers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-charcoal text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-gold uppercase tracking-[0.3em] text-xs font-bold mb-4">Comprehensive Suite</h2>
+                <h3 class="font-serif text-4xl md:text-5xl">Luxury Solutions</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-white/10">
+                <!-- Service 1 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5">
+                    <i class="fas fa-kitchen-set text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">Modular Kitchens</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Ergonomic, space-optimized layouts with premium European hardware and waterproof ply.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5" style="transition-delay: 100ms;">
+                    <i class="fas fa-bed text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">Master Bedrooms</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Tailored storage solutions and wardrobes that blend functionality with boutique aesthetics.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5" style="transition-delay: 200ms;">
+                    <i class="fas fa-tv text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">Living & TV Units</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Personalized media centers featuring hidden wiring and premium stone/veneer finishes.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5">
+                    <i class="fas fa-lightbulb text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">False Ceiling & POP</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Modern decorative coves, layered POP works, and precision ambient LED lighting placement.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5" style="transition-delay: 100ms;">
+                    <i class="fas fa-drafting-compass text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">3D Visual Modeling</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Photorealistic renders of your space before we even hammer a single nail.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-charcoal p-10 reveal hover:bg-slate transition-all duration-500 border border-white/5" style="transition-delay: 200ms;">
+                    <i class="fas fa-key text-gold text-3xl mb-8"></i>
+                    <h4 class="text-xl font-serif mb-4">Turnkey Execution</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">End-to-end management from site mapping to final handover. No stress, just perfection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-24 px-6 md:px-12 bg-champagne">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-gold uppercase tracking-[0.3em] text-xs font-bold mb-4">The Journey</h2>
+                <h3 class="font-serif text-4xl">From Vision to Reality</h3>
+            </div>
+            
+            <div class="space-y-12 relative">
+                <!-- Line -->
+                <div class="absolute left-4 md:left-1/2 h-full w-px bg-gold/30 -translate-x-1/2 hidden md:block"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row items-center reveal">
+                    <div class="w-full md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <span class="text-gold font-serif text-4xl italic">01</span>
+                        <h4 class="text-xl font-bold mt-2">Onsite Mapping</h4>
+                        <p class="text-slate/60 text-sm mt-2">Personalized space consultation and measurement at your property.</p>
+                    </div>
+                    <div class="w-8 h-8 bg-gold rounded-full z-10 hidden md:block"></div>
+                    <div class="w-full md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row items-center reveal">
+                    <div class="w-full md:w-1/2 md:pr-12"></div>
+                    <div class="w-8 h-8 bg-charcoal rounded-full z-10 hidden md:block"></div>
+                    <div class="w-full md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                        <span class="text-gold font-serif text-4xl italic">02</span>
+                        <h4 class="text-xl font-bold mt-2">Design & Budget</h4>
+                        <p class="text-slate/60 text-sm mt-2">High-fidelity 3D modeling and transparent cost allocation.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row items-center reveal">
+                    <div class="w-full md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <span class="text-gold font-serif text-4xl italic">03</span>
+                        <h4 class="text-xl font-bold mt-2">Flawless Handover</h4>
+                        <p class="text-slate/60 text-sm mt-2">Expert execution by master craftsmen and turnkey project delivery.</p>
+                    </div>
+                    <div class="w-8 h-8 bg-gold rounded-full z-10 hidden md:block"></div>
+                    <div class="w-full md:w-1/2 md:pl-12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-white px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-charcoal rounded-3xl p-8 md:p-16 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gold/10 blur-[100px]"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <div class="flex items-center space-x-2 mb-6">
+                            <i class="fab fa-google text-white/40"></i>
+                            <span class="text-gold text-xs font-bold uppercase tracking-widest">Client Testimonials</span>
+                        </div>
+                        <h3 class="text-white font-serif text-4xl md:text-5xl mb-6">A 4.8 Star Reputation built on Trust.</h3>
+                        <p class="text-white/60 mb-8">Join over 150+ happy families in Secunderabad and Hyderabad who chose Top One Interiors for their dream homes.</p>
+                        <div class="flex -space-x-3">
+                            <div class="w-12 h-12 rounded-full border-2 border-charcoal bg-slate flex items-center justify-center text-xs font-bold text-white">R</div>
+                            <div class="w-12 h-12 rounded-full border-2 border-charcoal bg-gold flex items-center justify-center text-xs font-bold text-charcoal">S</div>
+                            <div class="w-12 h-12 rounded-full border-2 border-charcoal bg-slate flex items-center justify-center text-xs font-bold text-white">K</div>
+                            <div class="w-12 h-12 rounded-full border-2 border-charcoal bg-gold/50 backdrop-blur flex items-center justify-center text-[10px] font-bold text-white">+150</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                               <div class="bg-white/5 p-6 border border-white/10 rounded-2xl reveal shadow-inner">
+                            <div class="flex text-amberGlow text-[10px] mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-white/80 italic text-sm mb-4">"The team at Top One Interiors transformed our 3BHK in Boduppal into a masterpiece. The modular kitchen finish is exactly like the showrooms!"</p>
+                            <p class="text-gold text-xs font-bold uppercase tracking-widest">— Mr. Rajesh K., Hyderabad</p>
+                        </div>
+                        <div class="bg-white/5 p-6 border border-white/10 rounded-2xl reveal shadow-inner" style="transition-delay: 200ms;">
+                            <div class="flex text-amberGlow text-[10px] mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-white/80 italic text-sm mb-4">"Best interior designers near Boduppal. Very transparent with costs and delivered the project 5 days before the deadline."</p>
+                            <p class="text-gold text-xs font-bold uppercase tracking-widest">— Sneha Reddy, Secunderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-champagne">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 luxury-card-shadow rounded-sm reveal">
+            <div class="text-center mb-10">
+                <h3 class="font-serif text-3xl mb-2">Request a Quote</h3>
+                <p class="text-slate/60 text-sm uppercase tracking-widest">Start your home transformation today</p>
+            </div>
+            
+            <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase font-bold text-slate tracking-widest">Full Name</label>
+                    <input type="text" placeholder="e.g. Rahul Sharma" class="w-full bg-champagne border-none p-4 text-sm focus:ring-1 focus:ring-gold outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase font-bold text-slate tracking-widest">Phone Number</label>
+                    <input type="tel" placeholder="+91" class="w-full bg-champagne border-none p-4 text-sm focus:ring-1 focus:ring-gold outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase font-bold text-slate tracking-widest">Area / Locality</label>
+                    <input type="text" placeholder="e.g. Uppal, Boduppal" class="w-full bg-champagne border-none p-4 text-sm focus:ring-1 focus:ring-gold outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase font-bold text-slate tracking-widest">Project Type</label>
+                    <select class="w-full bg-champagne border-none p-4 text-sm focus:ring-1 focus:ring-gold outline-none transition-all appearance-none">
+                        <option>Full Home Interior</option>
+                        <option>Modular Kitchen</option>
+                        <option>Wardrobe & Bedroom</option>
+                        <option>Living & False Ceiling</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 mt-4">
+                    <button type="submit" class="w-full bg-charcoal text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-gold transition-all duration-500 luxury-card-shadow">
+                        Submit Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal pt-20 pb-10 px-6 md:px-12 text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+            <div>
+                <div class="flex flex-col mb-6">
+                    <span class="text-gold font-serif text-2xl tracking-widest font-bold">TOP ONE</span>
+                    <span class="text-white text-[10px] tracking-[0.3em] -mt-1 uppercase">Interiors</span>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed mb-6">
+                    The gold standard in turnkey residential interiors in Hyderabad. Crafting bespoke spaces that reflect your personality and prestige.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-instagram text-xs"></i></a>
+                  <a href="https://wa.me/919398243784" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl mb-6">Contact Details</h4>
+                <ul class="space-y-4 text-white/60 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                        <span>2-65, Bhavani Nagar, Near Municipal Corporation, Boduppal, Hyderabad, Telangana, India.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-gold"></i>
+                        <a href="tel:+919398243784" class="hover:text-gold">+91 93982 43784</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-gold"></i>
+                        <span>contact@toponeinteriors.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl mb-6">Trust Badge</h4>
+                <div class="bg-white/5 p-6 border border-white/10 rounded-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl font-bold text-gold">4.8</span>
+                        <div class="flex text-amberGlow text-[10px]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest font-bold text-white/40">154+ Verified Google Reviews</p>
+                    <hr class="my-4 border-white/10">
+                    <p class="text-xs text-white/60">Registered & Certified Interior Design Firm serving Greater Hyderabad.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center pt-10 border-t border-white/5">
+            <p class="text-white/30 text-[10px] uppercase tracking-[0.2em]">© 2024 Top One Interiors. Developed for Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919398243784" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl animate-soft-float hover:scale-110 transition-transform">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Intersection Observer Script -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once animated, stop observing
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+                  });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-3');
+            }
+        });
+    </script>
+  </body>
+</html>
+                    

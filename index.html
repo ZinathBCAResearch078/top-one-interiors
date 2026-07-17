@@ -88,6 +88,13 @@
         .image-zoom-container { overflow: hidden; }
         .image-zoom-container img { transition: transform 0.7s ease-in-out; }
         .image-zoom-container:hover img { transform: scale(1.1); }
+              
+        /* Emergency Pitch Fix: Force everything to show up instantly */
+        .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        
     </style>
     
 </head>
